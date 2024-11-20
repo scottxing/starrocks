@@ -39,8 +39,13 @@ starrocks::MemTracker* CurrentThread::mem_tracker() {
     }
 }
 
+<<<<<<< HEAD
 starrocks::MemTracker* CurrentThread::operator_mem_tracker() {
     return tls_operator_mem_tracker;
+=======
+starrocks::MemTracker* CurrentThread::singleton_check_mem_tracker() {
+    return tls_singleton_check_mem_tracker;
+>>>>>>> 0dc29fa8e1 ([Refactor] Remove meaningless profiler operator mem peaks (#53045))
 }
 
 CurrentThread& CurrentThread::current() {
